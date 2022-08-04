@@ -1,0 +1,33 @@
+<h4>TensorFlow.js implementation of a pong-playing AI</h4>
+<p>You play as the bottom paddle, use arrow keys to move.</p>
+<h6>Rules: Don't read/judge the js.</h6>
+
+<div id='mainContent'></div>
+
+<!-- tfjs : tensorflow.js 부분 코드를 사용할 수 있는 소스코드를 불러오는 듯 하다 아마도?-->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"> </script>
+
+<!-- ml5js : javascript에서 웹캠 정보를 끌어들일 수 있는 코드인듯-->
+<script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js"></script>
+
+<!--게임 & 모델과 로직 부분은 pongai.js 파일에서 처리를 한다. -->
+<script src="pongai.js"></script>
+<p id="playing"></p>
+
+
+<!--카메라 화면 송출 부분 - camera.js로 조정한다 -->
+
+
+<main id="camera">
+        
+    
+    <canvas id="camera--sensor"></canvas>
+    <!-- 디바이스 카메라로 담은 영상을 해당 페이지에 재생한다. -->
+    <video id="camera--view" autoplay playsinline></video>
+    
+    <img src="//:0" alt="" id="camera--output">
+
+    <button id="camera--trigger">사진촬영</button>
+
+</main>
+<script src="camera.js"></script>
