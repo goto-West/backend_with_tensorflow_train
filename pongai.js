@@ -12,7 +12,7 @@ async function init(){
     //모델 로드 AI가 플레이함
     console.log('model loaded from storage');
     computer.ai_plays = true;
-
+    
     if(computer.ai_plays){
         document.getElementById("playing").innerHTML = "Playing: AI";
     }else{
@@ -23,7 +23,7 @@ async function init(){
     animate(step);
 }
 
-// set game animation speed (game clock)
+
 var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
         window.setTimeout(callback, 1000 / 60)
 };
@@ -405,6 +405,7 @@ AI.prototype.train = function(){
                                                                             // either [1, 0 0] for left, [0, 1, 0] - for no move
                                                                             // and [0, 0, 1] for right (depending in index if training data)
     }
+
     //console.log(data_xs);
     //console.log(data_ys);
     document.createElement("playing").innerHTML = "Training: "+data_xs.length+" records";
