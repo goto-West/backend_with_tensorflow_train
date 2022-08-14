@@ -23,6 +23,7 @@ function cameraStart(){
             //stream을 받아서 해당 스트림이 트랙을 받아 track 변수에 할당
             track = stream.getTracks()[0];
             cameraView.srcObject = stream;
+            camera_detect();
 
         })
         .catch(function(error){
@@ -30,8 +31,17 @@ function cameraStart(){
         })
 }
 
+
+
 function camera_detect(){
 
+    //camera 뷰 크기 설정 (640)
+    cameraSensor.width = cameraView.videoWidth;
+    cameraSensor.height = cameraView.videoHeight;
+    cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+
+    //log
+    console.log(cameraSensor.height);
 
 }
 
