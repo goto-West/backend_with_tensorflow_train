@@ -5,7 +5,7 @@
 async function init(){
 
     //model =  await tf.loadModel('indexeddb://my-model-1');
-    //tensorflow로 만든 모델을 링크로부터 얻어오는것임...json으로 받아오긴 하는데...? 맞낭?
+    //tensorflow로 만든 모델을 링크로부터 얻어옴 저장 포맷은 json
     //model =  await tf.loadModel('tfjsversion/model.json');
     model =  await tf.loadModel('https://hkinsley.com/static/tfjsmodel/model.json');
     
