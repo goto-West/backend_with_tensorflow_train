@@ -1,22 +1,24 @@
-// init function
-async function init(){
 
-    //posenet 모델 불러오기
-    model =  await tf.loadModel('https://unpkg.com/@tensorflow-models/posenet');
+const fs = require('fs');
+const path = require('path');
+const process = require('process');
+const tf = require('@tensorflow/tfjs-node');
+
+
+const modelpath = 'file://model_NBC.sav';
+
+// main function
+async function main() {
+
+    //load classification model
+    await tf.enableProdMode();
+    await tf.setBackend('tensorflow');
+    await tf.ENV.set('DEBUG', false);
+    await tf.ready();
+    model =  await tf.loadModel(modelpath);
     
 
-
-    //-----------------수정------------------------
-    //모델 로드 AI가 플레이함
-    console.log('model loaded from storage');
-    computer.ai_plays = true;
-
-    if(computer.ai_plays){
-        document.getElementById("playing").innerHTML = "Playing: AI";
-    }else{
-        document.getElementById("playing").innerHTML = "Playing: Computer";
-    }
-
-    // start a game 게임시작
-    animate(step);
+    // 
+    const res = model.execute(img.tensor);
+    
 }
