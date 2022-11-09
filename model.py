@@ -15,10 +15,18 @@ import joblib as jl
 # gnb = GaussianNB()
 # gnb.fit(X_train, y_train)
 
-filename = 'model_NBC.sav'
+# filename = 'model_NBC.sav'
+filename = '221105NBC.json'
+filename = '221105NBC_2.pkl'
 loaded_model = jl.load(filename)
+
+# result = loaded_model.predict([[160, 145, 176, 164, 112, 72, 176, 176]])
+# print("it's working!")
+# print(result)
 
 def pose_classification () : 
     result = loaded_model.predict([[160, 145, 176, 164, 112, 72, 176, 176]])
-    print("it's working!");
-    return result;
+    # print("it's working!")
+    print(result)
+    return result
+
