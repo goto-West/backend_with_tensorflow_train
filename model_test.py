@@ -1,3 +1,5 @@
+import sys
+import argparse
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -10,9 +12,13 @@ def pose_classification (list) :
     return result
 
 def main () :
-    print("start")
+    #get parameter
+    ag = sys.argv[1:]
+    result = pose_classification(ag)
+    print("result : "+ result)
+    return result
 
 
 if __name__ == "__main__" : 
     main()
-    pose_classification([[160, 145, 176, 164, 112, 72, 176, 176]])
+    
