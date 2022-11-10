@@ -1,11 +1,13 @@
+
 //const fs = require('fs');
 //const path = require('path');
 //const process = require('process');
 
-var spawn = require('child_process').spawn;
 
+var spawn = require('child_process').spawn;
 // main function
 async function main() {
+
 
     let argument = [160, 145, 176, 164, 112, 72, 176, 176];
 
@@ -27,28 +29,6 @@ async function main() {
         console.log(data.toString());
         
     })  
-    
-    /*
-    pythonClassification.stdout.on('data', (data) => {
-        console.log(`stdout: ${data}`);
-    });
-
-    pythonClassification.on('data', (data) => {
-        console.log(`error:${data}`);
-    });
-    
-    pythonClassification.on('exit', () => {
-        console.log(`Classification process ended with code`);
-    });
-    /*
-    $.ajax({
-        type: "POST",
-        url: "~/model_classification.py",
-        data: { param: text}
-      }).done(function( o ) {
-         
-    });
-    */
     
 }
 

@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 
 
 # filename = 'model_NBC.sav'
+
 # filename = '221105NBC.json'
 filename = '221105NBC_2.pkl'
 loaded_model = jl.load(filename)
@@ -38,3 +39,4 @@ def main () :
 if __name__ == "__main__" : 
     main()
     
+
