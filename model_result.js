@@ -23,12 +23,11 @@ async function main() {
 
     pythonClassification.stdout.on('data', function(data) {
         console.log(data.toString());
-    })  
+    })
     
     pythonClassification.stderr.on('data', function(data) {
         console.log(data.toString());
-        
-    })  
+    })
     
 }
 
