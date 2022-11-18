@@ -3,7 +3,7 @@ node.js 내 모델 load python 코드 import 개발
 
 ## INPUT : Skeleton Data
 [[1, 2, 3, 4, 5, 6, 7, 8]]
-![skeleton](https://user-images.githubusercontent.com/59429729/202688693-0a966709-d772-4b17-b6a1-f93cd708fbff.jpg)
+![skeleton](https://user-images.githubusercontent.com/59429729/202688957-052251eb-2e9f-4bab-986d-2a95a82a70c9.jpg)
 
 ## OUTPUT : Model Classification Pose Name
 |English|Korean|
