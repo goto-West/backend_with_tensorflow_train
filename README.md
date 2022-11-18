@@ -6,7 +6,7 @@ node.js 내 모델 load python 코드 import 개발
 
 # OUTPUT : Model Classification Pose Name
 |English|Korean|
-|:-||-|
+|:-|:-|
 - arm_stretch_up            |위로 손깍지
 - arm_stretch_upper_right   |오른쪽 손깍지
 - arm_stretch_upper_left    |왼쪽 손깍지
